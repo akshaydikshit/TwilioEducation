@@ -2,11 +2,14 @@
 require_once './autoload.php';
 use Twilio\Twiml;
 
-$response = new Twiml();
-$message = $response->message();
-$message->body('Hello World!');
-$response->redirect('https://demo.twilio.com/sms/welcome');
 
+$body = $_REQUEST['Body'];
+
+if( $body == 'hello' ){
+    $response->message('Hi!');
+}else if( $body == 'bye' ){
+    $response->message('Goodbye');
+}
 echo $response;
 
 ?>
