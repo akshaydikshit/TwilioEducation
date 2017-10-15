@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+require_once './autoload.php';
 use Twilio\Twiml;
 
 $response = new Twiml();
@@ -8,3 +8,5 @@ $message->body('Hello World!');
 $response->redirect('https://demo.twilio.com/sms/welcome');
 
 echo $response;
+
+?>
