@@ -5,7 +5,7 @@ use Twilio\Twiml;
 $body = $_REQUEST['Body'];
 $from = $_REQUEST['From'];
 
-if( ($from == '+19292402278') && ($body == 'hello') && (stripos($body, "attendance" )!== FALSE)){
+if( ($from == '+19292402278') && ($body == 'hello') && (stripos($body, 'attendance' )!== FALSE)){
  $response = new Twiml();
 $message = $response->message("Thanks for the text.");
 }
