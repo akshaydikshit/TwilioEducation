@@ -5,9 +5,9 @@ use Twilio\Twiml;
 $body = $_REQUEST['Body'];
 $from = $_REQUEST['From'];
 
-if( ($from == '+19292402278') && (stripos($body, 'hello' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
+if( ($from == '+19292402278') && (stripos($body, '10/10/2017' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
  $response = new Twiml();
-$message = $response->message("Thanks for the text.");
+$message = $response->message("Your ward was Present on this date.");
 }
 
 else if( $body == 'bye' ){
