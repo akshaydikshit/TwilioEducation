@@ -37,5 +37,10 @@ else if( ($from == '+19292402278') && (stripos($body, '2017-10-04' )!== FALSE) &
 $message = $response->message("Your ward was Absent on this date.");
 }
 
+else {
+ $response = new Twiml();
+$message = $response->message("Incorrect Format.");
+}
+
 echo $response;
 ?>
