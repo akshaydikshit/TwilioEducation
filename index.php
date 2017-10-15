@@ -42,7 +42,7 @@ $message = $response->message("Your ward was Absent on this date.");
 else {
  $response = new Twiml();
  $message = $response->message($from);
-$message = $response->message("Incorrect Format.");
+
 }
 
 echo $response;
