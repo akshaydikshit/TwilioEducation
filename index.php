@@ -3,8 +3,7 @@ require_once './autoload.php';
 use Twilio\Twiml;
 $body = $_REQUEST['Body'];
 $from = $_REQUEST['From'];
-echo $body;
-echo $from;
+
 
 if( ($from == '+19292402278') && (stripos($body, '2017-10-01' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
  $response = new Twiml();
@@ -25,7 +24,7 @@ else if( ($from != '+19292402278') && (stripos($body, '2017-10-01' )!== FALSE) &
 $message = $response->message("Sorry this is not a registered number. Please try again with a registered number.");
 }
 
-else if( ($from != '+19292402278') && (stripos($body, '2017-10-02' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
+else if( ($from !== '+19292402278') && (stripos($body, '2017-10-02' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
  $response = new Twiml();
 $message = $response->message("Sorry this is not a registered number. Please try again with a registered number.");
 }
