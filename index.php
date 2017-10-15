@@ -25,7 +25,7 @@ else if( (stripos($from1, $regnum )!== FALSE) && (stripos($body, '2017-10-01' )!
 $message = $response->message("Sorry this is not a registered number. Please try again with a registered number.");
 }
 
-else if( ($from1 == '6464645046') && (stripos($body, '2017-10-02' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
+else if( ($from == '6464645046') && (stripos($body, '2017-10-02' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
  $response = new Twiml();
 $message = $response->message("Sorry this is not a registered number. Please try again with a registered number.");
 }
