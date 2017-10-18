@@ -24,7 +24,7 @@ $message = $response->message("Sorry this is not a registered number. Please try
 
 else if ($from != '+19292402278'){
  $response = new Twiml();
-$message = $response->message("Sorry this is not a registered number. Please try again with a registered number.");
+$message = $response->message(" HELLO FROM AKSHAY DIKSHIT");
 }
 
 
