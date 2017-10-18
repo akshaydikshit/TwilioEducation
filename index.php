@@ -3,7 +3,7 @@ require_once './autoload.php';
 use Twilio\Twiml;
 $body = $_REQUEST['Body'];
 $from = $_REQUEST['From'];
-if( ($from == '+19292402278') && ((stripos($body, '12345' )!== FALSE) && (stripos($body, '2017-10-01' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
+if( ($from == '+19292402278') && (stripos($body, '12345' )!== FALSE) && (stripos($body, '2017-10-01' )!== FALSE) && (stripos($body, 'attendance' )!== FALSE)){
  $response = new Twiml();
 $message = $response->message("Your ward was Present on this date.");
 }
